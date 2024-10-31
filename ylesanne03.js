@@ -20,4 +20,10 @@ console.log("Lehekülgi kokku on: " + vastus);
 console.log("Viimasel lehel on " + jaak + " postitust");
 
 //Serveri töökulu
+const voimsus = 400
+const hind = 9.69
 
+const tarbimine = voimsus / 100
+const kulu = tarbimine * hind
+
+console.log("tookulu on: " + kulu + " eurot tunnis")
