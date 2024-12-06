@@ -18,3 +18,22 @@ switch (true) {
     default:
         console.log("Palun sisesta kehtiv number.");
 }
+
+let broneering = parseFloat(prompt("Sisesta broneeringu arv:"));
+
+    switch (true) {
+        case (broneering >= 1 && broneering <= 2):
+            console.log("Valige laud kahele inimesele.");
+            break;
+        case (broneering >= 3 && broneering <= 4):
+            console.log("Valige laud neljale inimesele.");
+            break;
+        case (broneering >= 5 && broneering <= 6):
+            console.log("Valige laud kuuele inimesele.");
+            break;
+        case (broneering > 6):
+            console.log("Valige suur laud.");
+            break;
+        default:
+            console.log("Vigane broneeringu arv.");
+    }
