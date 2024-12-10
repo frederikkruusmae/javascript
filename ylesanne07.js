@@ -44,14 +44,14 @@ const temperatuurid = [
 
 const kuud = "Jaanuar, Veebruar, Märts, Aprill, Mai, Juuni, Juuli, August, September, Oktoober, November, Detsember".split(", ");
 
-//Leida iga kuu keskmine temperatuur
+//Leiab iga kuu keskmise tempi
 for (let i = 0; i < temperatuurid.length; i++) {
     const kuutemperatuurid = temperatuurid[i];
     const keskminetemperatuur = kuutemperatuurid.reduce((sum, temp) => sum + temp, 0) / kuutemperatuurid.length;
     console.log(`${kuud[i]}: Keskmine temperatuur on ${keskminetemperatuur.toFixed(2)} °C`);
 }
 
-//Leiab kuud kus olid kõige kõrgemad temperatuuri ja kõige madalamad temperatuurid
+//Väljastab kuu kus oli kõige madalam temp ja kõige kõrgem
 let maxtemp = -Infinity;
 let mintemp = Infinity;
 let maxtemptuu = '';
@@ -59,19 +59,19 @@ let mintempkuu = '';
 
 for (let i = 0; i < temperatuurid.length; i++) {
     const kuutemperatuurid = temperatuurid[i];
-    const highesttemp = Math.max(...kuutemperatuurid);
-    const lowesttemp = Math.min(...kuutemperatuurid);
+    const korgetemp = Math.max(...kuutemperatuurid);
+    const vaiketemp = Math.min(...kuutemperatuurid);
     
-    if (highesttemp > maxtemp) {
-        maxtemp = highesttemp;
+    if (korgetemp > maxtemp) {
+        maxtemp = korgetemp;
         maxtempkuu = kuud[i];
     }
     
-    if (lowesttemp < mintemp) {
-        mintemp = lowesttemp;
+    if (vaiketemp < mintemp) {
+        mintemp = vaiketemp;
         mintempkuu = kuud[i];
     }
 }
 
-console.log(`Kõige kõrgem temperatuur oli ${maxtemp} °C kuus ${maxtempkuu}.`);
-console.log(`Kõige madalam temperatuur oli ${mintemp} °C kuus ${mintempkuu}.`);
+console.log(`Kõige kõrgem temperatuur oli ${maxtemp} °C ${maxtempkuu} kuus.`);
+console.log(`Kõige madalam temperatuur oli ${mintemp} °C ${mintempkuu} kuus.`);
