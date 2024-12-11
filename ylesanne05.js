@@ -20,12 +20,12 @@ let kasutajanimi = prompt("Sisesta oma kasutajanimi:");
 kasutajanimi === "admin" ? console.log("Tere, administraator!") : console.log("Tere, külaline!");
 
 //ÜRITUSE PILETITE HIND
-let piletitüüp = prompt("Sisesta piletitüüp (täispilet / sooduspilet):").toLowerCase();
+let piletituup = prompt("Sisesta piletituup (täispilet / sooduspilet):").toLowerCase();
 let vanus = parseInt(prompt("Sisesta oma vanus:"));
 
 let hind;
 
-if (piletitüüp === "täispilet") {
+if (piletituup === "täispilet") {
     if (vanus < 18) {
         hind = 10;
     } else if (vanus >= 18 && vanus <= 64) {
@@ -33,14 +33,14 @@ if (piletitüüp === "täispilet") {
     } else {
         hind = 15; 
     }
-} else if (piletitüüp === "sooduspilet") {
+} else if (piletituup === "sooduspilet") {
     if (vanus < 18 || vanus >= 65) {
         hind = 8; 
     } else if (vanus >= 18 && vanus <= 64) {
         hind = 15; 
     }
 } else {
-    console.log("Vale piletitüüp. Palun sisesta 'täispilet' või 'sooduspilet'.");
+    console.log("Vale piletituup. Palun sisesta 'täispilet' või 'sooduspilet'.");
 }
 
 if (hind !== undefined) {
