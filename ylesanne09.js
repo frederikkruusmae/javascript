@@ -1,6 +1,6 @@
 //Frederik Kruusimäe
 //09.01.2025
-//07
+//09
 
 //Erinevad funktsioonid
 function nimi(){
